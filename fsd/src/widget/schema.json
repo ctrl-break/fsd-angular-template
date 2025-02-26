@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "ID": "fsd-widget-schema",
+    "title": "FSD widget schema",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "widget name",
+            "$default": {
+                "$source": "argv",
+                "index": 0
+            }
+        },
+        "path": {
+            "type": "string",
+            "description": "Path for generation"
+        }
+    },
+    "required": ["name"]
+}

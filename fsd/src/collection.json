@@ -5,6 +5,21 @@
             "description": "Generate FSD entity structure",
             "factory": "./entity/index#entity",
             "schema": "./entity/schema.json"
+        },
+        "feature": {
+            "description": "Generate FSD feature structure",
+            "factory": "./feature/index#entity",
+            "schema": "./feature/schema.json"
+        },
+        "widget": {
+            "description": "Generate FSD widget structure",
+            "factory": "./widget/index#entity",
+            "schema": "./widget/schema.json"
+        },
+        "page": {
+            "description": "Generate FSD page structure",
+            "factory": "./page/index#entity",
+            "schema": "./page/schema.json"
         }
     }
 }
