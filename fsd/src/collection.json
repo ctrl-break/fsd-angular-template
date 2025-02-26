@@ -1,0 +1,10 @@
+{
+    "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+    "schematics": {
+        "entity": {
+            "description": "Generate FSD entity structure",
+            "factory": "./entity/index#entity",
+            "schema": "./entity/schema.json"
+        }
+    }
+}

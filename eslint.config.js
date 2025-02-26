@@ -12,13 +12,13 @@ const featureSlicedConfig = compat.extends('@feature-sliced/eslint-config');
 module.exports = tseslint.config(
     {
         files: ['**/*.ts'],
+        ignores: ['fsd/**/*'],
         extends: [
             eslint.configs.recommended,
             ...tseslint.configs.recommended,
             ...tseslint.configs.stylistic,
             ...angular.configs.tsRecommended,
             ...featureSlicedConfig,
-            // FSD.extends,
         ],
         languageOptions: {
             ecmaVersion: 2020,
