@@ -1,6 +1,6 @@
 <app-header></app-header>
 <app-main-layout>
-    <app-sidebar *ngIf="showSidebar$ | async"></app-sidebar>
+    <app-sidebar *ngIf="userId$ | async as userId" [id]="userId"></app-sidebar>
 
     <router-outlet />
 </app-main-layout>

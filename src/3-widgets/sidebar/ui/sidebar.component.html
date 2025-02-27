@@ -1,9 +1,10 @@
 <aside class="sidebar">
-    <nav *ngIf="routeParams$ | async as routeParams">
+    <nav *ngIf="id">
         <ul>
-            <li (touch)="navigateTo(routeParams['id'], 'posts')">Посты</li>
-            <li (touch)="navigateTo(routeParams['id'], 'comments')">Комментарии</li>
-            <li (touch)="navigateTo(routeParams['id'], 'albums')">Альбомы</li>
+            <li [routerLink]="['/users']" routerLinkActive="router-link-active">&laquo; На главную</li>
+            <li [routerLink]="['/users', id, 'posts']" routerLinkActive="router-link-active">Посты</li>
+            <li [routerLink]="['/users', id, 'comments']" routerLinkActive="router-link-active">Комментарии</li>
+            <li [routerLink]="['/users', id, 'albums']" routerLinkActive="router-link-active">Альбомы</li>
         </ul>
     </nav>
 </aside>

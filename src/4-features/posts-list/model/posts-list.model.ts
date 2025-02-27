@@ -1,4 +1,4 @@
 export interface PostsList {
-  id: string;
-  // Add model fields
+    id: string;
+    // Add model fields
 }

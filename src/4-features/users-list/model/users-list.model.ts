@@ -1,4 +1,4 @@
 export interface UsersList {
-  id: string;
-  // Add model fields
+    id: string;
+    // Add model fields
 }

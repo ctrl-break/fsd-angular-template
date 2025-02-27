@@ -1,4 +1,4 @@
 export interface AlbumsList {
-  id: string;
-  // Add model fields
+    id: string;
+    // Add model fields
 }

@@ -14,15 +14,12 @@ import { filter, map, Observable } from 'rxjs';
 })
 export class AppComponent {
     title = 'fsd-angular-template';
+    showSidebar = false;
 
     router = inject(Router);
 
-    showSidebar$: Observable<boolean> = this.router.events.pipe(
+    userId$: Observable<string> = this.router.events.pipe(
         filter((event) => event instanceof NavigationEnd),
-        map((event) => /^\/users\/\d+/.test(event.urlAfterRedirects)),
+        map((event) => (/^\/users\/\d+/.test(event.urlAfterRedirects) ? event.urlAfterRedirects.split('/')[2] : '')),
     );
-
-    //   .subscribe((event: NavigationEnd) => {
-    //     this.showSidebar = /^\/users\/\d+/.test(event.urlAfterRedirects);
-    //   });
 }

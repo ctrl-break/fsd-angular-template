@@ -2,6 +2,6 @@ import { Injectable } from '@angular/core';
 import { AlbumsList } from '../model/albums-list.model';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root',
 })
 export class AlbumsListService {}
