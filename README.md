@@ -22,6 +22,8 @@ Clone the repository and install dependencies:
 git clone <repo-url>
 cd angular-fsd-starter
 npm install
+
+npm run clean-demo # to DELETE a demo project
 ```
 
 ### Running the project
@@ -56,12 +58,14 @@ This will start the demo application.
 "lint": "ng lint",
 "schema:i": "cd fsd && npm i",
 "schema:b": "cd fsd && npm run build"
+"clean-demo": "node ./clean-demo-project.js"
 ```
 
 - **`format`** – Formats the code using Prettier
 - **`lint`** – Runs ESLint with FSD-specific rules
 - **`schema:i`** – Installs dependencies for custom schematics
 - **`schema:b`** – Builds the schematics
+- **`clean-demo`** – Clean demo project
 
 ---
 

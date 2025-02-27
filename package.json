@@ -11,7 +11,8 @@
         "format": "prettier --write \"src/**/*.{ts,html,scss}\"",
         "lint": "ng lint",
         "schema:i": "cd fsd && npm i",
-        "schema:b": "cd fsd && npm run build"
+        "schema:b": "cd fsd && npm run build",
+        "clean-demo": "node ./clean-demo-project.js"
     },
     "dependencies": {
         "@angular/animations": "^19.1.0",
