@@ -1,3 +1,4 @@
+import { PostComponent } from '@/entities/post';
 import { UserComponent } from '@/entities/user';
 import { PostsListComponent } from '@/features/posts-list';
 import { UsersComponent } from '@/pages/users';
@@ -15,8 +16,7 @@ export const routes: Routes = [
                 children: [
                     { path: '', redirectTo: 'posts', pathMatch: 'full' },
                     { path: 'posts', component: PostsListComponent },
-                    //   { path: 'posts/:postId', component: PostDetailComponent }
-                    // Можно добавить маршруты для комментариев и альбомов
+                    { path: 'posts/:postId', component: PostComponent },
                 ],
             },
         ],

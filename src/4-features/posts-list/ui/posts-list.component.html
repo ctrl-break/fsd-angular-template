@@ -1,8 +1,7 @@
-<hr />
 <div>
     <h3>User posts</h3>
     <ul *ngIf="posts$ | async as posts">
-        <li *ngFor="let post of posts">
+        <li *ngFor="let post of posts" [routerLink]="['/users', post.userId, 'posts', post.id]" routerLinkActive="router-link-active">
             {{ post.title }}
         </li>
     </ul>

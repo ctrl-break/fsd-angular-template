@@ -1,12 +1,12 @@
 import { PostService } from '@/entities/post';
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { map, switchMap } from 'rxjs';
 
 @Component({
     selector: 'app-posts-list',
-    imports: [CommonModule],
+    imports: [CommonModule, RouterLink],
     templateUrl: './posts-list.component.html',
     styleUrls: ['./posts-list.component.scss'],
 })
