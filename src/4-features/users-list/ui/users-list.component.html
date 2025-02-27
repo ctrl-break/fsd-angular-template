@@ -1,1 +1,8 @@
-<p>UsersList works!</p>
+<div>
+    <h2>Users list</h2>
+    <ul *ngIf="users$ | async as users">
+        <li *ngFor="let user of users" (click)="selectUser(user)" (keyup.enter)="selectUser(user)" tabindex="0">
+            {{ user.name }}
+        </li>
+    </ul>
+</div>

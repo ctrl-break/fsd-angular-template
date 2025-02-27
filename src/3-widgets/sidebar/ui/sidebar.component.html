@@ -1,1 +1,9 @@
-<p>Sidebar works!</p>
+<aside class="sidebar">
+    <nav *ngIf="routeParams$ | async as routeParams">
+        <ul>
+            <li (touch)="navigateTo(routeParams['id'], 'posts')">Посты</li>
+            <li (touch)="navigateTo(routeParams['id'], 'comments')">Комментарии</li>
+            <li (touch)="navigateTo(routeParams['id'], 'albums')">Альбомы</li>
+        </ul>
+    </nav>
+</aside>
