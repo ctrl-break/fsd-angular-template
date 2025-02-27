@@ -1,1 +1,11 @@
-<p>AlbumsList works!</p>
+<div class="albums" *ngIf="albums$ | async as albums">
+    <h3>User albums</h3>
+    <ul *ngIf="albums?.length; else noAlbums">
+        <li *ngFor="let album of albums">
+            {{ album.title }}
+        </li>
+    </ul>
+    <ng-template #noAlbums>
+        <p>no Albums</p>
+    </ng-template>
+</div>

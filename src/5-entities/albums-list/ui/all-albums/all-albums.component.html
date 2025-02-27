@@ -1,0 +1,11 @@
+<div class="all-albums" *ngIf="albums$ | async as albums">
+    <ul *ngIf="albums?.length; else noAlbums">
+        <li *ngFor="let album of albums">
+            <strong>User {{ album.userId }}</strong
+            >: {{ album.title }}
+        </li>
+    </ul>
+    <ng-template #noAlbums>
+        <p>No albums</p>
+    </ng-template>
+</div>

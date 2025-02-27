@@ -1,10 +1,9 @@
 <aside class="sidebar">
     <nav *ngIf="id">
         <ul>
-            <li [routerLink]="['/users']" routerLinkActive="router-link-active">&laquo; На главную</li>
-            <li [routerLink]="['/users', id, 'posts']" routerLinkActive="router-link-active">Посты</li>
-            <li [routerLink]="['/users', id, 'comments']" routerLinkActive="router-link-active">Комментарии</li>
-            <li [routerLink]="['/users', id, 'albums']" routerLinkActive="router-link-active">Альбомы</li>
+            <li [routerLink]="['/users']" routerLinkActive="router-link-active">&laquo; Main page</li>
+            <li [routerLink]="['/users', id, 'posts']" routerLinkActive="router-link-active">User posts</li>
+            <li [routerLink]="['/users', id, 'albums']" routerLinkActive="router-link-active">User albums</li>
         </ul>
     </nav>
 </aside>

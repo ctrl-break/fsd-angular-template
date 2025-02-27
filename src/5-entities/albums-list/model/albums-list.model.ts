@@ -1,4 +1,5 @@
-export interface AlbumsList {
-    id: string;
-    // Add model fields
+export interface Album {
+    id: number;
+    userId: number;
+    title: string;
 }
