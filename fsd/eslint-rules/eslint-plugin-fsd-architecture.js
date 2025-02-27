@@ -122,14 +122,10 @@ function createPublicApiImports() {
                     const currentPath = context.getFilename();
 
                     if (!isInternalImport(importPath)) return;
-
-                    const resolvedPath = resolveAliasPath(importPath);
-                    const currentLayer = getLayer(currentPath);
-
-                    // Exceptions for app and shared layers
-                    if (!currentLayer || ['app', 'shared'].includes(currentLayer)) return;
                     if (!importPath.includes('@/')) return;
-                    console.log(importPath, currentLayer);
+
+                    const currentLayer = getLayer(currentPath);
+                    if (!currentLayer || currentLayer === 'app') return;
 
                     if (importPath.split('/')?.length <= 3) return;
 
