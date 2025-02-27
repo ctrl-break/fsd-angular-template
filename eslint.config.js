@@ -2,12 +2,8 @@
 const eslint = require('@eslint/js');
 const tseslint = require('typescript-eslint');
 const angular = require('angular-eslint');
-const { FlatCompat } = require('@eslint/eslintrc');
-
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-});
-const featureSlicedConfig = compat.extends('@feature-sliced/eslint-config');
+const fsdPlugin = require('./fsd/eslint-rules/eslint-plugin-fsd-architecture.js');
+const importPlugin = require('eslint-plugin-import');
 
 module.exports = tseslint.config(
     {
@@ -18,10 +14,13 @@ module.exports = tseslint.config(
             ...tseslint.configs.recommended,
             ...tseslint.configs.stylistic,
             ...angular.configs.tsRecommended,
-            ...featureSlicedConfig,
         ],
         languageOptions: {
             ecmaVersion: 2020,
+        },
+        plugins: {
+            fsd: fsdPlugin,
+            import: importPlugin,
         },
         processor: angular.processInlineTemplates,
         rules: {
@@ -41,6 +40,12 @@ module.exports = tseslint.config(
                     style: 'kebab-case',
                 },
             ],
+
+            'fsd/no-upper-layer-imports': 'error',
+            'fsd/no-cross-layer-imports': 'error',
+            'fsd/public-api-imports': 'error',
+            'import/no-relative-packages': 'error',
+            'import/no-relative-parent-imports': 'error',
         },
     },
     {
